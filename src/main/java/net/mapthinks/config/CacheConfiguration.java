@@ -43,6 +43,20 @@ public class CacheConfiguration {
             cm.createCache(net.mapthinks.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(net.mapthinks.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(net.mapthinks.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
+            cm.createCache(net.mapthinks.domain.Company.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mapthinks.domain.CompanyUser.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mapthinks.domain.SystemUser.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mapthinks.domain.Customer.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mapthinks.domain.City.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mapthinks.domain.Town.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mapthinks.domain.Employee.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mapthinks.domain.Car.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mapthinks.domain.CarBrand.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mapthinks.domain.MaintainType.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mapthinks.domain.CarModel.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mapthinks.domain.Maintenance.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mapthinks.domain.MaintainInstance.class.getName(), jcacheConfiguration);
+            cm.createCache(net.mapthinks.domain.Operation.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

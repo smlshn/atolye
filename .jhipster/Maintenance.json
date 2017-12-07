@@ -1,0 +1,40 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "company",
+            "otherEntityName": "company",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "maintainType",
+            "otherEntityName": "maintainType",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "priceSecond",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20171207204746",
+    "entityTableName": "maintenance",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "angularJSSuffix": "app"
+}

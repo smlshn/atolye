@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity MaintainInstance.
+    -->
+    <changeSet id="20171207204747-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="done_by_id"
+                                 baseTableName="maintain_instance"
+                                 constraintName="fk_maintain_instance_done_by_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employee"/>
+
+        <addForeignKeyConstraint baseColumnNames="operation_id"
+                                 baseTableName="maintain_instance"
+                                 constraintName="fk_maintain_instance_operation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="operation"/>
+
+        <addForeignKeyConstraint baseColumnNames="maintenance_id"
+                                 baseTableName="maintain_instance"
+                                 constraintName="fk_maintain_instance_maintenance_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="maintenance"/>
+
+    </changeSet>
+</databaseChangeLog>

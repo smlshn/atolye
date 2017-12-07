@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="atolyeApp.maintainInstance.detail.title">Maintain Instance</span> {{vm.maintainInstance.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atolyeApp.maintainInstance.name">Name</span></dt>
+        <dd>
+            <span>{{vm.maintainInstance.name}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.maintainInstance.comment">Comment</span></dt>
+        <dd>
+            <span>{{vm.maintainInstance.comment}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.maintainInstance.price">Price</span></dt>
+        <dd>
+            <span>{{vm.maintainInstance.price}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.maintainInstance.priceSecond">Price Second</span></dt>
+        <dd>
+            <span>{{vm.maintainInstance.priceSecond}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.maintainInstance.doneBy">Done By</span></dt>
+        <dd>
+            <a ui-sref="employee-app-detail({id:vm.maintainInstance.doneBy.id})">{{vm.maintainInstance.doneBy.name}}</a>
+        </dd>
+        <dt><span data-translate="atolyeApp.maintainInstance.operation">Operation</span></dt>
+        <dd>
+            <a ui-sref="operation-app-detail({id:vm.maintainInstance.operation.id})">{{vm.maintainInstance.operation.id}}</a>
+        </dd>
+        <dt><span data-translate="atolyeApp.maintainInstance.maintenance">Maintenance</span></dt>
+        <dd>
+            <a ui-sref="maintenance-app-detail({id:vm.maintainInstance.maintenance.id})">{{vm.maintainInstance.maintenance.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="maintain-instance-app-detail.edit({id:vm.maintainInstance.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

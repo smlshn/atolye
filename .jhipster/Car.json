@@ -1,0 +1,54 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "company",
+            "otherEntityName": "company",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "model",
+            "otherEntityName": "carModel",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "customer",
+            "otherEntityName": "customer",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "plate",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "chaseNo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "km",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "latestOilChangeKm",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "lastVisit",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20171207204742",
+    "entityTableName": "car",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "angularJSSuffix": "app"
+}

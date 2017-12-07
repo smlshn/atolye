@@ -1,0 +1,67 @@
+
+<div>
+    <h2><span data-translate="atolyeApp.company.detail.title">Company</span> {{vm.company.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atolyeApp.company.name">Name</span></dt>
+        <dd>
+            <span>{{vm.company.name}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.company.shortName">Short Name</span></dt>
+        <dd>
+            <span>{{vm.company.shortName}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.company.vkn">Vkn</span></dt>
+        <dd>
+            <span>{{vm.company.vkn}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.company.phone">Phone</span></dt>
+        <dd>
+            <span>{{vm.company.phone}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.company.phoneSecond">Phone Second</span></dt>
+        <dd>
+            <span>{{vm.company.phoneSecond}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.company.email">Email</span></dt>
+        <dd>
+            <span>{{vm.company.email}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.company.emailSecond">Email Second</span></dt>
+        <dd>
+            <span>{{vm.company.emailSecond}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.company.address">Address</span></dt>
+        <dd>
+            <span>{{vm.company.address}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.company.addressSecond">Address Second</span></dt>
+        <dd>
+            <span>{{vm.company.addressSecond}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.company.webSite">Web Site</span></dt>
+        <dd>
+            <span>{{vm.company.webSite}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.company.parent">Parent</span></dt>
+        <dd>
+            <a ui-sref="company-app-detail({id:vm.company.parent.id})">{{vm.company.parent.name}}</a>
+        </dd>
+        <dt><span data-translate="atolyeApp.company.town">Town</span></dt>
+        <dd>
+            <a ui-sref="town-app-detail({id:vm.company.town.id})">{{vm.company.town.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="company-app-detail.edit({id:vm.company.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

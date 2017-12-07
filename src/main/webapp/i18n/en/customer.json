@@ -1,0 +1,35 @@
+{
+    "atolyeApp": {
+        "customer" : {
+            "home": {
+                "title": "Customers",
+                "createLabel": "Create a new Customer",
+                "createOrEditLabel": "Create or edit a Customer",
+                "search": "Search for Customer"
+            },
+            "created": "A new Customer is created with identifier {{ param }}",
+            "updated": "A Customer is updated with identifier {{ param }}",
+            "deleted": "A Customer is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Customer {{ id }}?"
+            },
+            "detail": {
+                "title": "Customer"
+            },
+            "name": "Name",
+            "shortName": "Short Name",
+            "vkn": "Vkn",
+            "tckn": "Tckn",
+            "phone": "Phone",
+            "phoneSecond": "Phone Second",
+            "email": "Email",
+            "emailSecond": "Email Second",
+            "webSite": "Web Site",
+            "address": "Address",
+            "addressSecond": "Address Second",
+            "isCompany": "Is Company",
+            "company": "Company",
+            "town": "Town"
+        }
+    }
+}

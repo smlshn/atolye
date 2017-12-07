@@ -1,0 +1,110 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCompanyLabel" data-translate="atolyeApp.company.home.createOrEditLabel">Create or edit a Company</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.company.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.company.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atolyeApp.company.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.company.name"
+                    required/>
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atolyeApp.company.shortName" for="field_shortName">Short Name</label>
+            <input type="text" class="form-control" name="shortName" id="field_shortName"
+                    ng-model="vm.company.shortName"
+                    required/>
+            <div ng-show="editForm.shortName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.shortName.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atolyeApp.company.vkn" for="field_vkn">Vkn</label>
+            <input type="text" class="form-control" name="vkn" id="field_vkn"
+                    ng-model="vm.company.vkn"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atolyeApp.company.phone" for="field_phone">Phone</label>
+            <input type="text" class="form-control" name="phone" id="field_phone"
+                    ng-model="vm.company.phone"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atolyeApp.company.phoneSecond" for="field_phoneSecond">Phone Second</label>
+            <input type="text" class="form-control" name="phoneSecond" id="field_phoneSecond"
+                    ng-model="vm.company.phoneSecond"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atolyeApp.company.email" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.company.email"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atolyeApp.company.emailSecond" for="field_emailSecond">Email Second</label>
+            <input type="text" class="form-control" name="emailSecond" id="field_emailSecond"
+                    ng-model="vm.company.emailSecond"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atolyeApp.company.address" for="field_address">Address</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                    ng-model="vm.company.address"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atolyeApp.company.addressSecond" for="field_addressSecond">Address Second</label>
+            <input type="text" class="form-control" name="addressSecond" id="field_addressSecond"
+                    ng-model="vm.company.addressSecond"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atolyeApp.company.webSite" for="field_webSite">Web Site</label>
+            <input type="text" class="form-control" name="webSite" id="field_webSite"
+                    ng-model="vm.company.webSite"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="atolyeApp.company.parent" for="field_parent">Parent</label>
+            <select class="form-control" id="field_parent" name="parent" ng-model="vm.company.parent" ng-options="company as company.name for company in vm.companies track by company.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="atolyeApp.company.town" for="field_town">Town</label>
+            <select class="form-control" id="field_town" name="town" ng-model="vm.company.town" ng-options="town as town.name for town in vm.towns track by town.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,74 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMaintainInstanceLabel" data-translate="atolyeApp.maintainInstance.home.createOrEditLabel">Create or edit a Maintain Instance</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.maintainInstance.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.maintainInstance.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atolyeApp.maintainInstance.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.maintainInstance.name"
+                    required/>
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atolyeApp.maintainInstance.comment" for="field_comment">Comment</label>
+            <input type="text" class="form-control" name="comment" id="field_comment"
+                    ng-model="vm.maintainInstance.comment"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atolyeApp.maintainInstance.price" for="field_price">Price</label>
+            <input type="number" class="form-control" name="price" id="field_price"
+                    ng-model="vm.maintainInstance.price"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atolyeApp.maintainInstance.priceSecond" for="field_priceSecond">Price Second</label>
+            <input type="number" class="form-control" name="priceSecond" id="field_priceSecond"
+                    ng-model="vm.maintainInstance.priceSecond"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="atolyeApp.maintainInstance.doneBy" for="field_doneBy">Done By</label>
+            <select class="form-control" id="field_doneBy" name="doneBy" ng-model="vm.maintainInstance.doneBy" ng-options="employee as employee.name for employee in vm.employees track by employee.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="atolyeApp.maintainInstance.operation" for="field_operation">Operation</label>
+            <select class="form-control" id="field_operation" name="operation" ng-model="vm.maintainInstance.operation" ng-options="operation as operation.id for operation in vm.operations track by operation.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="atolyeApp.maintainInstance.maintenance" for="field_maintenance">Maintenance</label>
+            <select class="form-control" id="field_maintenance" name="maintenance" ng-model="vm.maintainInstance.maintenance" ng-options="maintenance as maintenance.id for maintenance in vm.maintenances track by maintenance.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

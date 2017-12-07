@@ -1,0 +1,22 @@
+{
+    "atolyeApp": {
+        "carBrand" : {
+            "home": {
+                "title": "Car Brands",
+                "createLabel": "Create a new Car Brand",
+                "createOrEditLabel": "Create or edit a Car Brand",
+                "search": "Search for Car Brand"
+            },
+            "created": "A new Car Brand is created with identifier {{ param }}",
+            "updated": "A Car Brand is updated with identifier {{ param }}",
+            "deleted": "A Car Brand is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Car Brand {{ id }}?"
+            },
+            "detail": {
+                "title": "Car Brand"
+            },
+            "name": "Name"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "atolyeApp": {
+        "systemUser" : {
+            "home": {
+                "title": "System Users",
+                "createLabel": "Create a new System User",
+                "createOrEditLabel": "Create or edit a System User",
+                "search": "Search for System User"
+            },
+            "created": "A new System User is created with identifier {{ param }}",
+            "updated": "A System User is updated with identifier {{ param }}",
+            "deleted": "A System User is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete System User {{ id }}?"
+            },
+            "detail": {
+                "title": "System User"
+            }
+        }
+    }
+}

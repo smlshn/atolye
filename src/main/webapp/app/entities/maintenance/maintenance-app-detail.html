@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span data-translate="atolyeApp.maintenance.detail.title">Maintenance</span> {{vm.maintenance.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atolyeApp.maintenance.name">Name</span></dt>
+        <dd>
+            <span>{{vm.maintenance.name}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.maintenance.price">Price</span></dt>
+        <dd>
+            <span>{{vm.maintenance.price}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.maintenance.priceSecond">Price Second</span></dt>
+        <dd>
+            <span>{{vm.maintenance.priceSecond}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.maintenance.company">Company</span></dt>
+        <dd>
+            <a ui-sref="company-app-detail({id:vm.maintenance.company.id})">{{vm.maintenance.company.name}}</a>
+        </dd>
+        <dt><span data-translate="atolyeApp.maintenance.maintainType">Maintain Type</span></dt>
+        <dd>
+            <a ui-sref="maintain-type-app-detail({id:vm.maintenance.maintainType.id})">{{vm.maintenance.maintainType.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="maintenance-app-detail.edit({id:vm.maintenance.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,22 @@
+{
+    "atolyeApp": {
+        "companyUser" : {
+            "home": {
+                "title": "Company Users",
+                "createLabel": "Create a new Company User",
+                "createOrEditLabel": "Create or edit a Company User",
+                "search": "Search for Company User"
+            },
+            "created": "A new Company User is created with identifier {{ param }}",
+            "updated": "A Company User is updated with identifier {{ param }}",
+            "deleted": "A Company User is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Company User {{ id }}?"
+            },
+            "detail": {
+                "title": "Company User"
+            },
+            "company": "Company"
+        }
+    }
+}

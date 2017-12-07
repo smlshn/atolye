@@ -1,0 +1,45 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "company",
+            "otherEntityName": "company",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "car",
+            "otherEntityName": "car",
+            "otherEntityField": "plate"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "comment",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "discountRate",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "totalPrice",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "remainder",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20171207204748",
+    "entityTableName": "operation",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "angularJSSuffix": "app"
+}

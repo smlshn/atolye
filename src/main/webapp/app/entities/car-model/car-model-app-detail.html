@@ -1,0 +1,27 @@
+
+<div>
+    <h2><span data-translate="atolyeApp.carModel.detail.title">Car Model</span> {{vm.carModel.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atolyeApp.carModel.name">Name</span></dt>
+        <dd>
+            <span>{{vm.carModel.name}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.carModel.brand">Brand</span></dt>
+        <dd>
+            <a ui-sref="car-brand-app-detail({id:vm.carModel.brand.id})">{{vm.carModel.brand.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="car-model-app-detail.edit({id:vm.carModel.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

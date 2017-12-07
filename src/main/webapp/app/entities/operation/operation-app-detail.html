@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="atolyeApp.operation.detail.title">Operation</span> {{vm.operation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atolyeApp.operation.comment">Comment</span></dt>
+        <dd>
+            <span>{{vm.operation.comment}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.operation.price">Price</span></dt>
+        <dd>
+            <span>{{vm.operation.price}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.operation.discountRate">Discount Rate</span></dt>
+        <dd>
+            <span>{{vm.operation.discountRate}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.operation.totalPrice">Total Price</span></dt>
+        <dd>
+            <span>{{vm.operation.totalPrice}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.operation.remainder">Remainder</span></dt>
+        <dd>
+            <span>{{vm.operation.remainder}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.operation.company">Company</span></dt>
+        <dd>
+            <a ui-sref="company-app-detail({id:vm.operation.company.id})">{{vm.operation.company.name}}</a>
+        </dd>
+        <dt><span data-translate="atolyeApp.operation.car">Car</span></dt>
+        <dd>
+            <a ui-sref="car-app-detail({id:vm.operation.car.id})">{{vm.operation.car.plate}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="operation-app-detail.edit({id:vm.operation.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

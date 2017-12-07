@@ -7,6 +7,20 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
+                "companyApp": "Company",
+                "companyUserApp": "Company User",
+                "systemUserApp": "System User",
+                "customerApp": "Customer",
+                "cityApp": "City",
+                "townApp": "Town",
+                "employeeApp": "Employee",
+                "carApp": "Car",
+                "carBrandApp": "Car Brand",
+                "maintainTypeApp": "Maintain Type",
+                "carModelApp": "Car Model",
+                "maintenanceApp": "Maintenance",
+                "maintainInstanceApp": "Maintain Instance",
+                "operationApp": "Operation",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

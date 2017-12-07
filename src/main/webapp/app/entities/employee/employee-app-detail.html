@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="atolyeApp.employee.detail.title">Employee</span> {{vm.employee.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atolyeApp.employee.nameSurname">Name Surname</span></dt>
+        <dd>
+            <span>{{vm.employee.nameSurname}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.employee.title">Title</span></dt>
+        <dd>
+            <span>{{vm.employee.title}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.employee.email">Email</span></dt>
+        <dd>
+            <span>{{vm.employee.email}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.employee.phoneNumber">Phone Number</span></dt>
+        <dd>
+            <span>{{vm.employee.phoneNumber}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.employee.hireDate">Hire Date</span></dt>
+        <dd>
+            <span>{{vm.employee.hireDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.employee.salary">Salary</span></dt>
+        <dd>
+            <span>{{vm.employee.salary}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.employee.company">Company</span></dt>
+        <dd>
+            <a ui-sref="company-app-detail({id:vm.employee.company.id})">{{vm.employee.company.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="employee-app-detail.edit({id:vm.employee.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

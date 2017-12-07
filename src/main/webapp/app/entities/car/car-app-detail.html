@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="atolyeApp.car.detail.title">Car</span> {{vm.car.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atolyeApp.car.plate">Plate</span></dt>
+        <dd>
+            <span>{{vm.car.plate}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.car.chaseNo">Chase No</span></dt>
+        <dd>
+            <span>{{vm.car.chaseNo}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.car.km">Km</span></dt>
+        <dd>
+            <span>{{vm.car.km}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.car.latestOilChangeKm">Latest Oil Change Km</span></dt>
+        <dd>
+            <span>{{vm.car.latestOilChangeKm}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.car.lastVisit">Last Visit</span></dt>
+        <dd>
+            <span>{{vm.car.lastVisit | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="atolyeApp.car.company">Company</span></dt>
+        <dd>
+            <a ui-sref="company-app-detail({id:vm.car.company.id})">{{vm.car.company.name}}</a>
+        </dd>
+        <dt><span data-translate="atolyeApp.car.model">Model</span></dt>
+        <dd>
+            <a ui-sref="car-model-app-detail({id:vm.car.model.id})">{{vm.car.model.name}}</a>
+        </dd>
+        <dt><span data-translate="atolyeApp.car.customer">Customer</span></dt>
+        <dd>
+            <a ui-sref="customer-app-detail({id:vm.car.customer.id})">{{vm.car.customer.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="car-app-detail.edit({id:vm.car.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

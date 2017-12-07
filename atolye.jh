@@ -1,0 +1,128 @@
+
+
+entity Company {
+    name String required,
+    shortName String required,
+    vkn String,
+    phone String,
+    phoneSecond String,
+    email String,
+    emailSecond String,
+    address String,
+    addressSecond String,
+    webSite String
+}
+
+entity CompanyUser{ 
+    
+}
+
+entity SystemUser{
+    
+}
+
+entity Customer{
+    name String required,
+    shortName String required,
+    vkn String,
+    tckn String,
+    phone String,
+    phoneSecond String,
+    email String,
+    emailSecond String,
+    webSite String,
+    address String,
+    addressSecond String,
+    isCompany Boolean
+}
+
+entity City{
+    name String required,
+    plate String
+}
+
+entity Town{
+    name String required
+}
+entity Employee {
+    nameSurname String required,
+    title String,
+    email String,
+    phoneNumber String,
+    hireDate ZonedDateTime,
+    salary Long
+}
+
+entity Car{
+    plate String required,
+    chaseNo String,
+    km Double,
+    latestOilChangeKm Double,
+    lastVisit ZonedDateTime,    
+}
+
+entity CarBrand{
+    name String required
+}
+
+entity MaintainType{
+    name String required
+}
+
+entity CarModel{
+    name String required
+}
+entity Maintenance{
+    name String required,
+    price Double,
+    priceSecond Double
+}
+
+entity MaintainInstance{
+    name String required,
+    comment String,
+    price Double,
+    priceSecond Double
+}
+
+entity Operation {
+    comment String,
+    price Double,
+    discountRate Double,
+    totalPrice Double,
+    remainder Double
+}
+relationship ManyToOne {
+    Company{parent(name)} to Company,
+    CompanyUser{company(name)} to Company,
+    Customer{company(name)} to Company,
+    Car{company(name)} to Company,
+    Maintenance{company(name)} to Company,
+    Operation{company(name)} to Company,
+    Employee{company(name)} to Company,
+    
+    MaintainInstance{doneBy(name)} to Employee,
+    Operation{car(plate)} to Car,
+    
+    MaintainInstance{operation} to Operation,
+    MaintainInstance{maintenance} to Maintenance,
+    Maintenance{maintainType(name)} to MaintainType,
+
+    Town{city(name)} to City,
+    
+    Company{town(name)} to Town,
+    Customer{town(name)} to Town,
+    
+    CarModel{brand(name)} to CarBrand,
+    
+    Car{model(name)} to CarModel,
+    Car{customer(name)} to Customer
+    
+}
+
+paginate Car, CarBrand, Operation, Maintenance, Customer, Town, City, Company, Employee with pagination
+
+// Set service options to all except few
+service Operation with serviceClass
+// Set an angular suffix
+angularSuffix * with app

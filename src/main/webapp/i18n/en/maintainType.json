@@ -1,0 +1,22 @@
+{
+    "atolyeApp": {
+        "maintainType" : {
+            "home": {
+                "title": "Maintain Types",
+                "createLabel": "Create a new Maintain Type",
+                "createOrEditLabel": "Create or edit a Maintain Type",
+                "search": "Search for Maintain Type"
+            },
+            "created": "A new Maintain Type is created with identifier {{ param }}",
+            "updated": "A Maintain Type is updated with identifier {{ param }}",
+            "deleted": "A Maintain Type is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Maintain Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Maintain Type"
+            },
+            "name": "Name"
+        }
+    }
+}

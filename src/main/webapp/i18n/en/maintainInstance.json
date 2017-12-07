@@ -1,0 +1,28 @@
+{
+    "atolyeApp": {
+        "maintainInstance" : {
+            "home": {
+                "title": "Maintain Instances",
+                "createLabel": "Create a new Maintain Instance",
+                "createOrEditLabel": "Create or edit a Maintain Instance",
+                "search": "Search for Maintain Instance"
+            },
+            "created": "A new Maintain Instance is created with identifier {{ param }}",
+            "updated": "A Maintain Instance is updated with identifier {{ param }}",
+            "deleted": "A Maintain Instance is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Maintain Instance {{ id }}?"
+            },
+            "detail": {
+                "title": "Maintain Instance"
+            },
+            "name": "Name",
+            "comment": "Comment",
+            "price": "Price",
+            "priceSecond": "Price Second",
+            "doneBy": "Done By",
+            "operation": "Operation",
+            "maintenance": "Maintenance"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "atolyeApp": {
+        "operation" : {
+            "home": {
+                "title": "Operations",
+                "createLabel": "Create a new Operation",
+                "createOrEditLabel": "Create or edit a Operation",
+                "search": "Search for Operation"
+            },
+            "created": "A new Operation is created with identifier {{ param }}",
+            "updated": "A Operation is updated with identifier {{ param }}",
+            "deleted": "A Operation is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Operation {{ id }}?"
+            },
+            "detail": {
+                "title": "Operation"
+            },
+            "comment": "Comment",
+            "price": "Price",
+            "discountRate": "Discount Rate",
+            "totalPrice": "Total Price",
+            "remainder": "Remainder",
+            "company": "Company",
+            "car": "Car"
+        }
+    }
+}
