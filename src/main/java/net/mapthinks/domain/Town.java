@@ -1,5 +1,6 @@
 package net.mapthinks.domain;
 
+import net.mapthinks.domain.base.AbstractBaseEntity;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -16,13 +17,9 @@ import java.util.Objects;
 @Table(name = "town")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 @Document(indexName = "town")
-public class Town implements Serializable {
+public class Town extends AbstractBaseEntity {
 
     private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
     @NotNull
     @Column(name = "name", nullable = false)
@@ -32,13 +29,6 @@ public class Town implements Serializable {
     private City city;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -72,14 +62,7 @@ public class Town implements Serializable {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Town town = (Town) o;
-        if (town.getId() == null || getId() == null) {
-            return false;
-        }
-        return Objects.equals(getId(), town.getId());
+        return super.equals(o);
     }
 
     @Override

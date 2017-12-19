@@ -1,12 +1,12 @@
 package net.mapthinks.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+import io.github.jhipster.web.util.ResponseUtil;
+import io.swagger.annotations.ApiParam;
 import net.mapthinks.domain.Operation;
 import net.mapthinks.service.OperationService;
 import net.mapthinks.web.rest.util.HeaderUtil;
 import net.mapthinks.web.rest.util.PaginationUtil;
-import io.swagger.annotations.ApiParam;
-import io.github.jhipster.web.util.ResponseUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -18,18 +18,14 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing Operation.
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/operations")
 public class OperationResource {
 
     private final Logger log = LoggerFactory.getLogger(OperationResource.class);

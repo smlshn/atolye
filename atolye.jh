@@ -13,12 +13,11 @@ entity Company {
     webSite String
 }
 
-entity CompanyUser{ 
-    
+entity CompanyUser{
 }
 
 entity SystemUser{
-    
+
 }
 
 entity Customer{
@@ -58,7 +57,7 @@ entity Car{
     chaseNo String,
     km Double,
     latestOilChangeKm Double,
-    lastVisit ZonedDateTime,    
+    lastVisit ZonedDateTime,
 }
 
 entity CarBrand{
@@ -100,24 +99,24 @@ relationship ManyToOne {
     Maintenance{company(name)} to Company,
     Operation{company(name)} to Company,
     Employee{company(name)} to Company,
-    
+
     MaintainInstance{doneBy(name)} to Employee,
     Operation{car(plate)} to Car,
-    
+
     MaintainInstance{operation} to Operation,
     MaintainInstance{maintenance} to Maintenance,
     Maintenance{maintainType(name)} to MaintainType,
 
     Town{city(name)} to City,
-    
+
     Company{town(name)} to Town,
     Customer{town(name)} to Town,
-    
+
     CarModel{brand(name)} to CarBrand,
-    
+
     Car{model(name)} to CarModel,
     Car{customer(name)} to Customer
-    
+
 }
 
 paginate Car, CarBrand, Operation, Maintenance, Customer, Town, City, Company, Employee with pagination

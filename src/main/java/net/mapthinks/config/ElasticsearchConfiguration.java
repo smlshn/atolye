@@ -20,7 +20,7 @@ public class ElasticsearchConfiguration {
         return new ElasticsearchTemplate(client, new CustomEntityMapper(jackson2ObjectMapperBuilder.createXmlMapper(false).build()));
     }
 
-    public class CustomEntityMapper implements EntityMapper {
+    public static class CustomEntityMapper implements EntityMapper {
 
         private ObjectMapper objectMapper;
 
